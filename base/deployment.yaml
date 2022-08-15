@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-web
+  name: web-example
 spec:
   selector:
     matchLabels:
-      app:  nginx-web
+      app:  web-example
   template:
     metadata:
       labels:
-        app:  nginx-web
+        app:  web-example
     spec:
       containers:
-        - name:  nginx-web
-          image:  iimage-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
+        - name:  web-example
+          image:  image-registry.openshift-image-registry.svc:5000/openshift/dotnet:latest
           ports:
           - name: http
-            containerPort: 8080
+            containerPort: 80
             protocol: TCP
