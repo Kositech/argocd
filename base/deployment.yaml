@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name:  nginx-web
-          image:  image-registry.openshift-image-registry.svc:5000/app1-dev/httpd:latest
+          image:  iimage-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
           ports:
           - name: http
             containerPort: 8080
