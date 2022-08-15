@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name:  web-example
-          image:  image-registry.openshift-image-registry.svc:5000/openshift/dotnet:latest
+          image:  image-registry.openshift-image-registry.svc:5000/openshift/dotnet-sample:latest
           ports:
           - name: http
             containerPort: 80
